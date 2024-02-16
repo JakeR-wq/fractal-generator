@@ -1,7 +1,8 @@
 # Fractal Generator
 
-This repository contains a Python script for generating fractal images. It also includes a setup script to ensure all necessary libraries are installed.
+This repository contains a Python script for generating fractal images.
 
+## Fractal creating with this script
 ![Julia Fractal](example_fractals/phonejulia.png)
 
 ## Setup
@@ -16,12 +17,12 @@ If you're using Windows, please ensure that you have Python installed and instal
 
 You can adjust the following parameters in the `fractal.py` file to customize the fractal image:
 
-- `c_real`: The real part of the complex constant defining the Julia set.
-- `c_imag`: The imaginary part of the complex constant defining the Julia set. [coefficients](#coefficients)
+- `c_real`: The real part of the complex constant defining the Julia set. See [coefficients.](#coefficients)
+- `c_imag`: The imaginary part of the complex constant defining the Julia set. See [coefficients.](#coefficients)
 - `colormap_name`: The name of the colormap used for coloring the fractal. You can change this to any valid colormap name available in Matplotlib. [color palettes](#color-palettes)
-- `iterations`: The maximum number of iterations for determining if a point belongs to the fractal. This parameter controls the level of detail in the fractal image. NOTE: This does not seem to have any real effect on the output image from my tests, I typically keep it ~1000
+- `iterations`: The maximum number of iterations for determining if a point belongs to the fractal. NOTE: This does not seem to have any real effect on the output image from my tests, I typically keep it ~1000
 - `size`: The size of the generated image in pixels. The image will be square with dimensions `size` x `size`. Depending on PC specs, anything over 2000 can take quite a while. I've found that 2000 seems to be the "sweet spot" of high resolution without taking forever.
-- `contrast`: (0, 1) The contrast of the colormap. Adjusts the contrast of the colors in the fractal image.
+- `contrast`: Set between 0 and 1. Adjusts the contrast of the colors in the fractal image.
 
 Play with `c_real` and `c_imag` to change the shapes of your fractals 
 
