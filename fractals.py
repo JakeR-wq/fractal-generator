@@ -8,7 +8,6 @@ from matplotlib.colors import Normalize
 import matplotlib.cm as cm
 from cv2 import imwrite
 
-# evaluates the polynomial p at point z
 def horner(p, z):
     result = 0
     for coeff in reversed(p):
@@ -19,7 +18,7 @@ def drawImage(filename, rgbfun, n):
     colormat = np.zeros((n, n, 3), dtype=float)
     for i in range(n):
         for j in range(n):
-            rgb01 = rgbfun(i, j) # rgb(a) values in [0,1]
+            rgb01 = rgbfun(i, j)
             for k in range(3): 
                 colormat[i,j,k] = int(255 * rgb01[2-k])
     imwrite(filename, colormat)
@@ -33,7 +32,6 @@ def radiusJulia(poly, L=1.0000001):
     C = sum(map(abs, poly)) - an
     return max(1, 2 * C / 2, pow(2 * L / an, 1 / (n-1)))
 
-# derivative of the given polynomial
 def differentiate(poly):
     n, an = len(poly) - 1, poly[0]
     return [(n - i) * an for (i, an) in enumerate(poly[:-1])]
@@ -71,7 +69,6 @@ def drawDemJulia(n, p, colormap, K, pow_, overflow, filename):
         print(f"Pixel ({i}, {j}): {result}")
         return result
 
-    # Use joblib.Parallel with verbose=10 to print progress
     results = Parallel(n_jobs=-1, verbose=10)(
         delayed(compute_and_print)(i, j)
         for i in range(n) for j in range(n)
