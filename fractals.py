@@ -95,9 +95,9 @@ if __name__ == '__main__':
     
     c_real = -.7269  # put real coeff here
     c_imag = .1889   # put imaginary coeff here
-    colormap_name = "Purples"  # Change this to the desired colormap name
-    iterations = 10000      # this doesnt really do anything that i can tell
-    size = 500          # size of image size^2
+    colormap_name = "gray"  # Change this to the desired colormap name
+    iterations = 800      # this doesnt really do anything that i can tell
+    size = 2000          # size of image size^2
     contrast = .7       #contrast of the colormap
 
     

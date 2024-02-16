@@ -41,6 +41,8 @@ The `colormap_name` parameter in the `fractal.py` file allows you to choose from
 ### Sequential (2)
 - Options: binary, gist_yarg, gist_gray, gray, bone, pink, spring, summer, autumn, winter, cool, Wistia, hot, afmhot, gist_heat, copper
 
+### [More info and visualizations from matplotlib](https://matplotlib.org/stable/users/explain/colors/colormaps.html)
+
 ## Coefficients <a name ="coefficients"></a>
 
 The `c_real` and `c_imag` parameters in the `fractal.py` file define the real and imaginary parts of the complex constant (`c`) used to generate the Julia set. You can experiment with different coefficients to explore various Julia sets. Here are a few examples of coefficients:
@@ -61,7 +63,7 @@ The `c_real` and `c_imag` parameters in the `fractal.py` file define the real an
     def demJulia(p, dp, z, K, R, overflow):
         zk, dk = z, 1
     ```
-    `zk` represents the function
+    `zk` represents the julia function
 
 2. Run the `fractal.py` script:
 
