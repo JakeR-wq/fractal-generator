@@ -9,9 +9,9 @@ A Python script for generating fractal images.
 
 To set up the required Python libraries, run the `setup.sh` script:
 
-This script detects your operating system and installs the necessary Python libraries (`numpy`, `joblib`, `matplotlib`) using the appropriate package manager (`apt` for Linux, `brew` for macOS).
+This script detects your operating system and installs the necessary Python libraries (`numpy`, `joblib`, `matplotlib`, `opencv`) using the appropriate package manager (`apt` for Linux, `brew` for macOS).
 
-If you're using Windows, please ensure that you have Python installed and install the required libraries (`numpy`, `joblib`, `matplotlib`) manually using pip.
+If you're using Windows, please ensure that you have Python installed and install the required libraries (`numpy`, `joblib`, `matplotlib`, `opencv-python`) manually using pip.
 
 ## Parameters
 
