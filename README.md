@@ -1,8 +1,8 @@
 # Fractal Generator
 
-This repository contains a Python script for generating fractal images.
+A Python script for generating fractal images.
 
-## Fractal creating with this script
+## Fractal created with this script
 ![Julia Fractal](example_fractals/phonejulia.png)
 
 ## Setup
@@ -53,8 +53,7 @@ The `c_real` and `c_imag` parameters in the `fractal.py` file define the real an
 - \( −0.8 + 0.156i \)
 - \( 0.355 + 0.355i \)
 - \( −0.835 − 0.2321i \)
-- [More found here](https://en.wikipedia.org/wiki/Julia_set)
-- [And here](https://paulbourke.net/fractals/juliaset/)
+- [More found here](https://en.wikipedia.org/wiki/Julia_set), [And here](https://paulbourke.net/fractals/juliaset/)
 
 ## Usage
 
