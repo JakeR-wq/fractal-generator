@@ -77,7 +77,7 @@ Happy fractaling!
 
 ## Acknowledgements
 
-The content of this repository is heavily inspired by the article ["Intro to Drawing Fractals with Python"](https://nseverkar.medium.com/intro-to-drawing-fractals-with-python-6ad53bbc8208) by Nisha Severkar. 
+The content of this repository is heavily inspired by the article ["Intro to Drawing Fractals with Python"](https://nseverkar.medium.com/intro-to-drawing-fractals-with-python-6ad53bbc8208) by [kuco23](https://kuco23.github.io/). 
 
 Please check out the original article for more detailed explanations and insights into fractal generation using Python.
 
