@@ -74,6 +74,7 @@ The `c_real` and `c_imag` parameters in the `fractal.py` file define the real an
 This will generate the fractal image based on the parameters you've set and put it into the `fractal_images` folder.
 
 Happy fractaling!
+
 ![another one](example_fractals/-0.7269+0.1889j_gray_0.7_julia.png)
 
 ## Acknowledgements
