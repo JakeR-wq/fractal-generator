@@ -97,7 +97,7 @@ if __name__ == '__main__':
     c_imag = .1889
     colormap_name = "Purples"  # Change this to the desired colormap name
     iterations = 10000
-    size = 4000
+    size = 500
     contrast = .7
     coefficients = [1, 0, c_real + c_imag * 1j]
     
