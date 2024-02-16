@@ -3,7 +3,7 @@
 A Python script for generating fractal images.
 
 ## Fractal created with this script
-![Julia Fractal](example_fractals/phonejulia.png)
+![Julia Fractal](example_fractals/0.3550+0.3550j_BuPu_0.7_julia.png)
 
 ## Setup
 
