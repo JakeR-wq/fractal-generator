@@ -37,7 +37,7 @@ def differentiate(poly):
     return [(n - i) * an for (i, an) in enumerate(poly[:-1])]
 
 def demJulia(p, dp, z, K, R, overflow):
-    zk, dk = np.exp(z), 1
+    zk, dk = z, 1
     for _ in range(K):
         if max(
             abs(zk.real), abs(zk.imag),
@@ -96,10 +96,10 @@ def format_coefficients(c_real, c_imag):
 
 if __name__ == '__main__':
     
-    c_real = .355  # put real coeff here
+    c_real = .3551  # put real coeff here
     c_imag = .355   # put imaginary coeff here
     colormap_name = "BuPu"  # Change this to the desired colormap name
-    iterations = 800      # this doesnt really do anything that i can tell
+    iterations = 1000      # this doesnt really do anything that i can tell
     size = 1000          # size of image = size^2
     contrast = .7       #contrast of the colormap
 
@@ -118,7 +118,6 @@ if __name__ == '__main__':
     # Generate filename based on coefficients and colormap
     filename = f"{format_coefficients(c_real, c_imag)}_{colormap_name}_{contrast}_julia.png"
     filepath = os.path.join(folder_name, filename)
-    iterations = 900
     drawDemJulia(
         size, coefficients,
         getattr(cm, colormap_name),
