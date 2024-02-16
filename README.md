@@ -12,25 +12,6 @@ This script detects your operating system and installs the necessary Python libr
 
 If you're using Windows, please ensure that you have Python installed and install the required libraries (`numpy`, `joblib`, `matplotlib`) manually using pip.
 
-## Usage
-
-1. Modify the parameters of the fractal in the `fractal.py` file according to your preferences. You can adjust the Julia function under the `demJulia` method as follows:
-
-    ```python
-    def demJulia(p, dp, z, K, R, overflow):
-        zk, dk = z, 1
-    ```
-
-    `zk` represents the function
-
-2. Run the `fractal.py` script:
-
-    ```bash
-    python3 fractal.py
-    ```
-
-This will generate the fractal image based on the parameters you've set.
-
 ## Parameters
 
 You can adjust the following parameters in the `fractal.py` file to customize the fractal image:
@@ -71,6 +52,24 @@ The `c_real` and `c_imag` parameters in the `fractal.py` file define the real an
 
 Feel free to adjust the color palette and coefficients according to your preferences to create different fractal images.
 
+## Usage
+
+1. Modify the parameters of the fractal in the `fractal.py` file according to your preferences. You can adjust the Julia function under the `demJulia` method as follows:
+
+    ```python
+    def demJulia(p, dp, z, K, R, overflow):
+        zk, dk = z, 1
+    ```
+
+    `zk` represents the function
+
+2. Run the `fractal.py` script:
+
+    ```bash
+    python3 fractal.py
+    ```
+
+This will generate the fractal image based on the parameters you've set.
 
 ## Acknowledgements
 
