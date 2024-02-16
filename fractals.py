@@ -39,7 +39,7 @@ def differentiate(poly):
     return [(n - i) * an for (i, an) in enumerate(poly[:-1])]
 
 def demJulia(p, dp, z, K, R, overflow):
-    zk, dk = np.exp(z), 1
+    zk, dk = z, 1
     for _ in range(K):
         if max(
             abs(zk.real), abs(zk.imag),
