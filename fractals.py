@@ -93,12 +93,14 @@ def format_coefficients(c_real, c_imag):
 
 if __name__ == '__main__':
     
-    c_real = -.7269
-    c_imag = .1889
+    c_real = -.7269  # put real coeff here
+    c_imag = .1889   # put imaginary coeff here
     colormap_name = "Purples"  # Change this to the desired colormap name
-    iterations = 10000
-    size = 500
-    contrast = .7
+    iterations = 10000      # this doesnt really do anything that i can tell
+    size = 500          # size of image size^2
+    contrast = .7       #contrast of the colormap
+
+    
     coefficients = [1, 0, c_real + c_imag * 1j]
     
     # Create folder if it doesn't exist
