@@ -2,7 +2,7 @@
 
 This repository contains a Python script for generating fractal images. It also includes a setup script to ensure all necessary libraries are installed.
 
-![Julia Fractal](example_fractals/-0.7000+0.2702j_plasma_julia.png)
+![Julia Fractal](example_fractals/phonejulia.png)
 
 ## Setup
 

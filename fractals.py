@@ -66,8 +66,14 @@ def drawDemJulia(n, p, colormap, K, pow_, overflow, filename):
     dp = differentiate(p)
     r = radiusJulia(p)
 
-    results = Parallel(n_jobs=-1)(
-        delayed(compute_dem_pixel)(i, j, n, p, dp, K, r, overflow)
+    def compute_and_print(i, j):
+        result = compute_dem_pixel(i, j, n, p, dp, K, r, overflow)
+        print(f"Pixel ({i}, {j}): {result}")
+        return result
+
+    # Use joblib.Parallel with verbose=10 to print progress
+    results = Parallel(n_jobs=-1, verbose=10)(
+        delayed(compute_and_print)(i, j)
         for i in range(n) for j in range(n)
     )
 
