@@ -41,7 +41,7 @@ if __name__ == "__main__":
     # testval, testval
     size = testres
     iterations = testval
-    contrast = .8
+    contrast = .6
     
     colormap = cm.get_cmap(colormapname)
     # Adjust contrast by applying a power function to the colormap's luminance values
@@ -60,8 +60,6 @@ if __name__ == "__main__":
         print(f"Created directory: {directory}")
 
     # Generate filename based on center and size
-    center_str = str(center.real) + "+" + str(center.imag) + "j"
-    size_str = str(width)
     filename = f"{center}_size_{size}_zoom{width}_clr_{colormapname}_cont_{contrast}.png"
 
     # Save the image with the generated filename in the 'fractal_images' directory
