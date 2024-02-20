@@ -27,15 +27,20 @@ def paint(mandelbrot_set, viewport, colormap, smooth):
             pbar.update(1)
 
 if __name__ == "__main__":
+    testval = 512
+    phone = 828, 1792
+    normit = 1000
+    normres = 1920, 1080
     # color_r reverses the color map
-    colormapname = "inferno_r"
+    colormapname = "coolwarm"
     # + on real shifts up + on imag shifts right
-    center = -.5 + .5j
-    width = .09
+    center = -.7269 + .1889j
+    width = .002
     # phone bg ~ 828 x 1792
-    size = 512, 512
-    iterations = 512
-    contrast = .09
+    # testval, testval
+    size = normres
+    iterations = normit
+    contrast = .35
     
     colormap = cm.get_cmap(colormapname)
     # Adjust contrast by applying a power function to the colormap's luminance values

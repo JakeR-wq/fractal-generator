@@ -4,3 +4,4 @@ venv
 fractal_images/
 testing/*
 testing/
+__pycache__
