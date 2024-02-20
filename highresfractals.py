@@ -32,17 +32,17 @@ if __name__ == "__main__":
     phone = 828, 1792
     normit = 1000
     normres = 1920, 1080
-    
+
     # color_r reverses the color map
-    colormapname = "plasma_r"
+    colormapname = "Greys"
     # + on real shifts up, + on imag shifts right
-    center = -.7 + .2702j
+    center = -.71 + .2702j
     width = .002
     # phone bg ~ 828 x 1792
     # testval, testval
-    size = testres
-    iterations = testval
-    contrast = .6
+    size = phone
+    iterations = normit
+    contrast = .15
     
     colormap = cm.get_cmap(colormapname)
     # Adjust contrast by applying a power function to the colormap's luminance values

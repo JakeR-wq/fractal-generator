@@ -1,7 +1,4 @@
-venv/
-venv/*
 venv
-fractal_images/
-testing/*
-testing/
+fractal_images
+testing
 __pycache__
