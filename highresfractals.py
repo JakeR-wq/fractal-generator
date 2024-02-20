@@ -20,8 +20,8 @@ def paint_pixel(pixel, mandelbrot_set, colormap, smooth):
     index = int(min(stability * colormap.shape[0], colormap.shape[0] - 1))
     pixel.color = tuple(int(255 * channel) for channel in colormap[index])
 
-def paint(mandelbrot_set, viewport, colormap, smooth):
-    with tqdm(total=viewport.width * viewport.height, desc="Painting Mandelbrot Set", ncols=80) as pbar:
+def paint(mandelbrot_set, viewport, colormap, smooth, iterations):
+    with tqdm(total=viewport.width * viewport.height * iterations, desc="Painting Mandelbrot Set", ncols=80) as pbar:
         for pixel in viewport:
             paint_pixel(pixel, mandelbrot_set, colormap, smooth)
             pbar.update(1)
@@ -32,9 +32,10 @@ if __name__ == "__main__":
     phone = 828, 1792
     normit = 1000
     normres = 1920, 1080
+    
     # color_r reverses the color map
     colormapname = "plasma_r"
-    # + on real shifts up + on imag shifts right
+    # + on real shifts up, + on imag shifts right
     center = -.7 + .2702j
     width = .002
     # phone bg ~ 828 x 1792
@@ -51,7 +52,7 @@ if __name__ == "__main__":
     mandelbrot_set = MandelbrotSet(max_iterations=iterations, escape_radius=1000)
     image = Image.new(mode="RGB", size=size)
     viewport = Viewport(image, center=center, width=width)
-    paint(mandelbrot_set, viewport, adjusted_colormap, smooth=True)
+    paint(mandelbrot_set, viewport, adjusted_colormap, smooth=True, iterations=iterations)
     
     # Create directory if it doesn't exist
     directory = "fractal_images"
