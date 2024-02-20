@@ -2,7 +2,7 @@ import matplotlib.cm as cm
 import numpy as np
 from PIL import Image
 from tqdm import tqdm
-from mandelbrot_03 import MandelbrotSet
+from mandelbrot import MandelbrotSet
 from viewport import Viewport
 import os
 
@@ -28,19 +28,20 @@ def paint(mandelbrot_set, viewport, colormap, smooth):
 
 if __name__ == "__main__":
     testval = 512
+    testres = testval, testval
     phone = 828, 1792
     normit = 1000
     normres = 1920, 1080
     # color_r reverses the color map
-    colormapname = "coolwarm"
+    colormapname = "plasma_r"
     # + on real shifts up + on imag shifts right
-    center = -.7269 + .1889j
+    center = -.7 + .2702j
     width = .002
     # phone bg ~ 828 x 1792
     # testval, testval
-    size = normres
-    iterations = normit
-    contrast = .35
+    size = testres
+    iterations = testval
+    contrast = .8
     
     colormap = cm.get_cmap(colormapname)
     # Adjust contrast by applying a power function to the colormap's luminance values
